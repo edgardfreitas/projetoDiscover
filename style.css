@@ -193,9 +193,7 @@ footer {
 }
 
 footer a:hover {
-color: gold;
-
-font-size: 18px;
+  color: chartreuse;
 }
 
 /* media queries */
