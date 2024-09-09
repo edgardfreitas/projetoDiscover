@@ -19,23 +19,7 @@
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(255, 255, 255, 0.2);
   --switch-bg-url: url(./assets/moon-stars.svg);
-}
-
-.light {
-  --text-color: black;
-  /* --bg-url: url(./assets/bg-mobile-light.jpg); */
-  --bg-url: rgb(209, 233, 246)
-    linear-gradient(
-      180deg,
-      rgba(209, 233, 246, 1) 0%,
-      rgba(246, 234, 203, 1) 50%,
-      rgba(241, 211, 206, 1) 100%
-    );
-  --stroke-color: rgba(0, 0, 0, 0.5);
-  --surface-color: rgba(0, 0, 0, 0.05);
-  --surface-color-hover: rgba(0, 0, 0, 0.02);
-  --highlight-color: rgba(0, 0, 0, 0.1);
-  --switch-bg-url: url(./assets/sun.svg);
+  --footer-color: chartreuse;
 }
 
 body {
@@ -54,6 +38,24 @@ body {
 body * {
   font-family: "Inter", sans-serif;
   color: var(--text-color);
+}
+
+.light {
+  --text-color: black;
+  /* --bg-url: url(./assets/bg-mobile-light.jpg); */
+  --bg-url: rgb(209, 233, 246)
+    linear-gradient(
+      180deg,
+      rgba(209, 233, 246, 1) 0%,
+      rgba(246, 234, 203, 1) 50%,
+      rgba(241, 211, 206, 1) 100%
+    );
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.1);
+  --switch-bg-url: url(./assets/sun.svg);
+  --footer-color: rgb(255, 0, 119);
 }
 
 #container {
@@ -126,7 +128,7 @@ body * {
 }
 
 /* links */
-ul {
+ul.links {
   list-style: none;
 
   display: flex;
@@ -136,7 +138,7 @@ ul {
   padding: 24px 0px;
 }
 
-ul li a {
+ul.links li a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -157,7 +159,7 @@ ul li a {
 }
 
 /* pseudo-selector */
-ul li a:hover {
+ul.links li a:hover {
   background: var(--surface-color-hover);
   border: 1.5px solid var(--text-color);
 }
@@ -193,7 +195,7 @@ footer {
 }
 
 footer a:hover {
-  color: chartreuse;
+  color: var(--footer-color);
 }
 
 /* media queries */
